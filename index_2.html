@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge_2</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style_2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="https://app.aluracursos.com/form-one/registro/latam-general">
+                <img class="header__logo" src="./assets/Logo.svg" alt="Logo de Alura">
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="main">
+            <div class="entrada">
+                <textarea id="entradaTexto" class="entrada__texto" placeholder="Ingrese el texto aqui" rows="4"></textarea>
+                <div class="entrada__pie">
+                    <p class="entrada__guia">Solo palabras con letras sin acento.</p>
+                    <div class="entrada__botones">
+                        <button id="btnEncriptar" class="btn__encriptar">Encriptar</button>
+                        <button id="btnDesencriptar" class="btn__desencriptar">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+            <div id="salida" class="salida">
+                <img id="muneco" class="muneco" src="/assets/Muneco.svg" alt="Muñeco del mensaje de salido">
+                <textarea id="salidaMensaje" class="salida__mensaje" 
+                placeholder="Ningún mensaje fue encontrado" readonly></textarea>
+                <p id="salidaGuia" class="salida__guia">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button id="btnCopiar" class="btn__copiar ocultar">Copiar</button>
+            </div>
+        </div>
+    </main>
+<script src="./js/script_2.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+:root{
+    --blanco: white;
+}
+
+body{
+    background: linear-gradient(to bottom right, #FFDE4D, #E85C0D);
+    font-family: "Inter", sans-serif;
+    margin-bottom: 50px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    height: 10%;
+}
+
+textarea{
+    font-family: "Inter", sans-serif;
+}
+
+.header{
+    width: 90%;
+    margin: auto;
+}
+
+.header__logo{
+    margin-top: 40px;
+}
+
+.main{
+    width: 80%;
+    margin: auto 40px auto auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 500px;
+    align-items: end;
+}
+
+.entrada{
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.entrada__texto{
+    width: 80%;
+    font-size: 32px;
+    color: var(--blanco);
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.entrada__texto::placeholder{
+    color: var(--blanco);
+}
+
+.entrada__guia{
+    color: var(--blanco);
+    font-size: 12px
+}
+
+.entrada__botones{
+    display: flex;
+    gap: 24px;
+    margin-top: 16px;
+    flex-wrap: nowrap;
+}
+
+.btn__encriptar:active,
+.btn__desencriptar:active,
+.btn__copiar:active {
+    transform: scale(0.95); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.1s ease; 
+}
+
+.btn__encriptar,
+.btn__desencriptar,
+.btn__copiar{
+    border: 1px solid black;
+    max-width: 328px;
+    min-width: 160px;
+    width: 40%;
+    height: 67px;
+    border-radius: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.836);
+    transition: transform 0.1s ease; 
+}
+
+.btn__encriptar{
+    background: linear-gradient(to bottom right, #FF204E,#FFC100);
+    color: var(--blanco);
+}
+
+.btn__desencriptar{
+    background: linear-gradient(to bottom right, #FFC100, #FF204E);
+    color: var(--blanco);
+}
+
+.salida{
+    background: radial-gradient(#C7253E, #821131);
+    height: calc(100% + 48px);
+    border-radius: 32px;
+    padding: 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 32px;
+    align-items: center;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.836);
+}
+
+.salida.ajuste{
+    justify-content: space-between;
+}
+
+.muneco{
+    width: 100%;
+}
+
+.oculto{
+    display: none;     
+}
+
+.salida__mensaje{
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--blanco);
+}
+
+.salida__mensaje::placeholder{
+    color: var(--blanco);
+}
+
+.salida__mensaje.ajuste{
+    text-align: left;
+    font-weight: 400;
+    height: 70%;
+}
+
+.salida__guia{
+    font-size: 16px;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.btn__copiar{
+    width: 100%;
+    display: none;
+    background: radial-gradient(#FFC55A,#FC4100);
+    color: var(--blanco);
+}
+
+@media screen and (max-width: 800px){
+    .main{
+        grid-template-columns: 1fr;
+        grid-row: 75% auto;
+        width: auto;
+        margin: auto 16px; /*Así ocupa todo el espacio*/
+    }   /* Primero alto y luego ancho*/
+
+    .entrada__botones{
+        justify-content: center;
+    }
+
+    .btn__encriptar,.btn__desencriptar,.btn__copiar{
+        width: 100%;
+        height: 67px;
+    }
+
+    .salida{
+        height: 70%;
+        margin-top: auto;
+        box-sizing: border-box;
+    }
+
+    .muneco{
+        display: none;
+    }
+    
+    .btn__copiar{
+        height: 67px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .main{
+        margin: auto 16px;
+    }
+    
+    .entrada__botones{
+        flex-wrap: wrap;
+    }
+    .btn__encriptar,.btn__desencriptar,.btn__copiar{
+        width: 100%;
+        height: 67px;
+    }
+
+    .salida{
+        height: 65%;
+        margin-top: auto;
+        box-sizing: border-box;
+    }
+
+    .salida__guia{
+        width: 300px;
+        border: 1px solid transparent;
+        padding: 10px;
+        word-wrap: break-word;
+    }
+
+}
